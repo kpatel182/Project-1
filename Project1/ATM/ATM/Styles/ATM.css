@@ -1,0 +1,140 @@
+
+body {
+    background-image: url("../Images/Background.jpg");   
+		background-repeat: no-repeat;
+		
+    }
+
+h1.title{
+	text-align: center;
+	font-weight: bold;
+	}
+
+h2.name
+{
+	text-align: center;
+	font-weight: bold;
+	color: blue;
+}
+
+h3
+{
+	color:blue;
+}
+.slot_wrapper {
+    position: relative;
+    top: 30px;
+}
+
+.slot {
+    border: 10px solid green;
+    border-radius: 6px;
+    height: 30px;
+    width: 120px;
+    margin: 0 auto;
+}
+
+div.ATM
+{
+		position: absolute;
+    left: 500px;
+    top: 300px;	
+}
+
+img.card-position{
+    width: 0px;
+    height: 0px;
+    background-color: red;    
+		position: absolute;
+    //left: 270px;
+    //top: 350px;		
+		animation-name: card-move;
+    animation-duration: 4s;		
+}
+
+img.card-position-return{      
+    width: 40px;
+    height: 65px;
+		position: absolute;
+    left: 765px;
+    top: 510px;		
+		animation-name: card-move-return;
+    animation-duration: 4s;		
+}
+
+/* Standard syntax */
+@keyframes card-move {
+   /* 0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}*/
+    /*50%  {background-color:blue; left:200px; top:200px;}*/
+    0%  {background-color:red; width:40px;height:65px; left:765px; top:510px;}
+    100% {background-color:red; width:40px;height:0px; left:765px; top:500px;}
+}
+
+@keyframes card-move-return {
+   
+   0%  {background-color:red; width:40px;height:0px; left:765px; top:500px;}
+    100% {background-color:red; width:40px;height:65px; left:765px; top:510px;}
+}
+
+div.next-instruction
+{
+	position: absolute;
+	left:1000px;
+	top: 450px;
+	color:blue;
+	font: italic bold 40px Georgia, serif;
+}
+
+img.pin-hand-position{
+    width: 50px;
+    height: 50px;    
+		/*background-color: white;*/
+		position: absolute;
+    left: 640px;
+    top: 650px;
+		animation-name: pin-hand-move;
+    animation-duration: 4s;		
+}
+
+@keyframes pin-hand-move {
+   0%   {left:615px; top:640px;}
+   25%   {left:625px; top:640px;}
+   50%   {left:625px; top:650px;}
+   100% {left:640px; top:650px;}
+}
+
+img.amount-hand-position{
+    width: 50px;
+    height: 50px;    
+		/*background-color: white;*/
+		position: absolute;
+    left: 590px;
+    top: 530px;
+		animation-name: amount-hand-move;
+    animation-duration: 4s;		
+}
+
+@keyframes amount-hand-move {
+   0%   {left:640px; top:650px;}   
+   100% {left:590px; top:530px;}
+}
+
+img.cash-position{
+    width: 104px;
+    height: 50px;    
+		/*background-color: white;*/
+		position: absolute;
+    left: 614px;
+    top: 620px;
+		animation-name: amount-move-return;
+    animation-duration: 4s;		
+}
+
+@keyframes amount-move-return {
+   /* 0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}*/
+    /*50%  {background-color:blue; left:200px; top:200px;}*/
+    0%  {width:104px;height:0px; left:614px; top:600px;}
+    100% {width:104px;height:50px; left:614px; top:620px;}
+}
